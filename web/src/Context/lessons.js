@@ -27,7 +27,7 @@ export const lessonsSlice = createSlice({
 
 export const getAllLessonsAsync = (data) => async(dispatch) => {
     try {
-        const response = await axios.get('http://localhost:3001/api/lessons/', {
+        const response = await axios.get('/api/lessons/', {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }
@@ -40,7 +40,7 @@ export const getAllLessonsAsync = (data) => async(dispatch) => {
 }
 export const getLessonByCourseAsync = (name) => async(dispatch) => {
     try {
-        const response = await axios.get(`http://localhost:3001/api/lessons/course/${encodeURIComponent(name)}`, {
+        const response = await axios.get(`/api/lessons/course/${encodeURIComponent(name)}`, {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }
@@ -53,7 +53,7 @@ export const getLessonByCourseAsync = (name) => async(dispatch) => {
 }
 export const getLessonByIdAsync = (id) => async(dispatch) => {
     try {
-        const response = await axios.get(`http://localhost:3001/api/lessons/${id}`, {
+        const response = await axios.get(`/api/lessons/${id}`, {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }
@@ -66,7 +66,7 @@ export const getLessonByIdAsync = (id) => async(dispatch) => {
 }
 export const createLessonAsync = (data) => async(dispatch) => {
     try {
-        const response = await axios.post(`http://localhost:3001/api/lessons/`, data, {
+        const response = await axios.post(`/api/lessons/`, data, {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }
@@ -78,7 +78,7 @@ export const createLessonAsync = (data) => async(dispatch) => {
 }
 export const updateLessonAsync = (id, data) => async(dispatch) => {
     try {
-        const response = await axios.put(`http://localhost:3001/api/lessons/${id}`, data, {
+        const response = await axios.put(`/api/lessons/${id}`, data, {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }

@@ -38,7 +38,7 @@ export const HomeworkSlice = createSlice({
 
 export const calculateScoreAsync = (userId, courseName) => async(dispatch) => {
     try {
-        const response = await axios.get(`http://localhost:3001/api/homeworks/calculateScore/${userId}/${courseName}`, {
+        const response = await axios.get(`/api/homeworks/calculateScore/${userId}/${courseName}`, {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }
@@ -52,7 +52,7 @@ export const calculateScoreAsync = (userId, courseName) => async(dispatch) => {
 
 export const getHomeworkByIdAsync = (id) => async(dispatch) => {
     try {
-        const response = await axios.get(`http://localhost:3001/api/homeworks/${id}`, {
+        const response = await axios.get(`/api/homeworks/${id}`, {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }
@@ -65,7 +65,7 @@ export const getHomeworkByIdAsync = (id) => async(dispatch) => {
 }
 export const getHomeworkByUserIdAsync = (id) => async(dispatch) => {
     try {
-        const response = await axios.get(`http://localhost:3001/api/homeworks/user/${id}`, {
+        const response = await axios.get(`/api/homeworks/user/${id}`, {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }
@@ -78,7 +78,7 @@ export const getHomeworkByUserIdAsync = (id) => async(dispatch) => {
 }
 export const getHomeworkByLessonIdAsync = (id) => async(dispatch) => {
     try {
-        const response = await axios.get(`http://localhost:3001/api/homeworks/lesson/${id}`, {
+        const response = await axios.get(`/api/homeworks/lesson/${id}`, {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }
@@ -91,7 +91,7 @@ export const getHomeworkByLessonIdAsync = (id) => async(dispatch) => {
 }
 export const getHasHomeworkAsync = (lessonId, userId) => async(dispatch) => {
     try {
-        const response = await axios.get(`http://localhost:3001/api/homeworks/hasHomework/${lessonId}/${userId}`, {
+        const response = await axios.get(`/api/homeworks/hasHomework/${lessonId}/${userId}`, {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }
@@ -105,7 +105,7 @@ export const getHasHomeworkAsync = (lessonId, userId) => async(dispatch) => {
 
 export const updateSeenAsync = (id, seenValue) => async(dispatch) => {
     try {
-        const response = await axios.put(`http://localhost:3001/api/homeworks/seen/${id}`, seenValue , {
+        const response = await axios.put(`/api/homeworks/seen/${id}`, seenValue , {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }
@@ -118,7 +118,7 @@ export const updateSeenAsync = (id, seenValue) => async(dispatch) => {
 }
 export const updateMarkedAsync = (id, data) => async(dispatch) => {
     try {
-        const response = await axios.put(`http://localhost:3001/api/homeworks/marked/${id}`, data , {
+        const response = await axios.put(`/api/homeworks/marked/${id}`, data , {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }
@@ -132,7 +132,7 @@ export const updateMarkedAsync = (id, data) => async(dispatch) => {
 
 export const postHomeworkAsync = (data) => async(dispatch) => {
     try {
-        const response = await axios.post(`http://localhost:3001/api/homeworks/`, data , {
+        const response = await axios.post(`/api/homeworks/`, data , {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }
@@ -146,7 +146,7 @@ export const postHomeworkAsync = (data) => async(dispatch) => {
 
 export const deleteHomeworkAsync = (id) => async(dispatch) => {
     try {
-        const response = await axios.delete(`http://localhost:3001/api/homeworks/${id}`, {
+        const response = await axios.delete(`/api/homeworks/${id}`, {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }

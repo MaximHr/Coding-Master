@@ -29,12 +29,12 @@ app.use('/api/lessons', require('./Routes/lessons.js') );
 app.use('/api/homeworks', require('./Routes/homeworks.js') );
 
 if(process.env.NODE_ENV === 'production') {
-  app.use(express.static('web/build'));
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'web', 'build', 'index.html'))
-  })
+	app.use(express.static('web/build'));
+  	app.get('*', (req, res) => {
+    	res.sendFile(path.resolve(__dirname, 'web', 'build', 'index.html'))
+  	})
 }
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+	console.log(`Example app listening on port ${port}`)
 })

@@ -36,7 +36,7 @@ export const courseSlice = createSlice({
 
 export const getAllCoursesAsync = (data) => async(dispatch) => {
     try {
-        const response = await axios.get('http://localhost:3001/api/courses/', {
+        const response = await axios.get('/api/courses/', {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }
@@ -50,7 +50,7 @@ export const getAllCoursesAsync = (data) => async(dispatch) => {
 
 export const getByIdAsync = (id) => async(dispatch) => {
     try {
-        const response = await axios.get(`http://localhost:3001/api/courses/${id}`, {
+        const response = await axios.get(`/api/courses/${id}`, {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }
@@ -63,7 +63,7 @@ export const getByIdAsync = (id) => async(dispatch) => {
 
 export const getByNameAsync = (name) => async(dispatch) => {
     try {
-        const response = await axios.get(`http://localhost:3001/api/courses/name/${encodeURIComponent(name)}`, {
+        const response = await axios.get(`/api/courses/name/${encodeURIComponent(name)}`, {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }
@@ -76,7 +76,7 @@ export const getByNameAsync = (name) => async(dispatch) => {
 
 export const deleteCourseAsync = (id) => async(dispatch) => {
     try {
-        const response = await axios.delete(`http://localhost:3001/api/courses/${id}`, {
+        const response = await axios.delete(`/api/courses/${id}`, {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }
@@ -89,7 +89,7 @@ export const deleteCourseAsync = (id) => async(dispatch) => {
 
 export const addNewParticipantAsync = (name) => async(dispatch) => {
     try {
-        const response = await axios.put(`http://localhost:3001/api/courses/addParticipant/${encodeURIComponent(name)}` , {
+        const response = await axios.put(`/api/courses/addParticipant/${encodeURIComponent(name)}` , {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }
@@ -101,7 +101,7 @@ export const addNewParticipantAsync = (name) => async(dispatch) => {
 }
 export const updateCourseAsync = (id, data) => async(dispatch) => {
     try {
-        const response = await axios.put(`http://localhost:3001/api/courses/${id}`, data, {
+        const response = await axios.put(`/api/courses/${id}`, data, {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }
@@ -114,7 +114,7 @@ export const updateCourseAsync = (id, data) => async(dispatch) => {
 
 export const createCourseAsync = (data) => async(dispatch) => {
     try {
-        const response = await axios.post(`http://localhost:3001/api/courses/`, data, {
+        const response = await axios.post(`/api/courses/`, data, {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }

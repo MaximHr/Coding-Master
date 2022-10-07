@@ -35,7 +35,7 @@ export const userSlice = createSlice({
 
 export const getAllUsersAsync = (data) => async (dispatch) => {
     try {
-        const response = await axios.get('http://localhost:3001/api/users/', {
+        const response = await axios.get('/api/users/', {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }
@@ -48,7 +48,7 @@ export const getAllUsersAsync = (data) => async (dispatch) => {
 }
 export const getUsersByTeacherAsync = (teacher) => async (dispatch) => {
     try {
-        const response = await axios.get(`http://localhost:3001/api/users/teacher/${teacher}`, {
+        const response = await axios.get(`/api/users/teacher/${teacher}`, {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }
@@ -61,9 +61,9 @@ export const getUsersByTeacherAsync = (teacher) => async (dispatch) => {
 }
 export const getUsersByCourseAsync = (course) => async (dispatch) => {
     try {
-        const response = await axios.get(`http://localhost:3001/api/users/course/${encodeURIComponent(course)}`, {
+        const response = await axios.get(`/api/users/course/${encodeURIComponent(course)}`, {
             headers: {
-                "Access-Control-Allow-Origin": "*"
+                "Access-Control-Al`lo`w-Origin": "*"
             }
         });
         dispatch(getByCourse(response.data))
@@ -74,7 +74,7 @@ export const getUsersByCourseAsync = (course) => async (dispatch) => {
 }
 export const getUserByIdAsync = (id) => async (dispatch) => {
     try {
-        const response = await axios.get(`http://localhost:3001/api/users/id/${id}`, {
+        const response = await axios.get(`/api/users/id/${id}`, {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }
@@ -87,7 +87,7 @@ export const getUserByIdAsync = (id) => async (dispatch) => {
 }
 export const logInUserAsync = (name, pass) => async (dispatch) => {
     try {
-        const response = await axios.get(`http://localhost:3001/api/users/login/${name}/${pass}`, {
+        const response = await axios.get(`/api/users/login/${name}/${pass}`, {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }
@@ -101,7 +101,7 @@ export const logInUserAsync = (name, pass) => async (dispatch) => {
 
 export const createUserAsync = (data) => async (dispatch) => {
     try {
-        const response = await axios.post(`http://localhost:3001/api/users/`, data, {
+        const response = await axios.post(`/api/users/`, data, {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }
@@ -114,7 +114,7 @@ export const createUserAsync = (data) => async (dispatch) => {
 }
 export const updateUserAsync = (id, data) => async (dispatch) => {
     try {
-        const response = await axios.put(`http://localhost:3001/api/users/${id}`, data, {
+        const response = await axios.put(`/api/users/${id}`, data, {
             headers: {
                 "Access-Control-Allow-Origin": "*"
             }
