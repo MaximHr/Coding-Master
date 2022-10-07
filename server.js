@@ -12,10 +12,6 @@ mongoose.connect(
     console.log("Mongo connected");
 });
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-
 //middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
