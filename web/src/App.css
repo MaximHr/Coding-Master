@@ -654,6 +654,20 @@ label {
   display: flex;
   padding: 0 10%;
 }
+.start .about.container div {
+  /* flex: 1; */
+  max-width: 60%;
+}
+@media screen and (max-width: 1000px){
+    .start .about.container {
+      display: flex;
+      gap: 3rem;
+      flex-direction: column;
+    }
+    .start .about.container div {
+      max-width: 100%;
+    }
+}
 .about {
   display: flex;
   margin-bottom: 5rem;

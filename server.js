@@ -1,3 +1,4 @@
+require('dotenv').config({path: __dirname + '/.env' });
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
@@ -6,9 +7,8 @@ const port = process.env.PORT || 3001;
 const cors = require('cors');
 
 //connecting the database
-//TODO
 mongoose.connect(
-    "mongodb+srv://max_hristov:max123@cluster0.625d3cz.mongodb.net/?retryWrites=true&w=majority", () => {
+   process.env.url, () => {
     console.log("Mongo connected");
 });
 

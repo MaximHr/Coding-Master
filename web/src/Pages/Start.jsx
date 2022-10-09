@@ -168,8 +168,8 @@ const Start = () => {
         <div>
 
           <h2>За Клубът</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, vero id pariatur, nisi accusamus adipisci blanditiis dolores facere tempora nulla sint? Corporis provident incidunt magni quae asperiores laborum! Commodi, minima!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, vero id pariatur, nisi accusamus adipisci blanditiis dolores facere tempora nulla sint? Corpor</p>
+          <p>Coding master е клуб по програмиране в Първа английска езикова гимназия. В него ученици от всякаква възраст и без предварителни знания могат да научат за ИТ света. </p>
+          <p>В края на учебната година, учениците ще могат да разработват модерни уебсайтове и приложения. Те ще получат сертификат подписан от директора на училището, който може да им помогне за кандидатсване в чужбина или за работа. Срещите ще се провеждат всеки вторник от 11:30 до 13:00 в 221-ви кабинет. Очакваме Ви !</p>
         </div>
         <div className="img-container">
           <img src={team} alt="Team" />
