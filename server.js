@@ -8,7 +8,7 @@ const cors = require('cors');
 
 //connecting the database
 mongoose.connect(
-   process.env.url, () => {
+   'mongodb+srv://max_hristov:max123@cluster0.625d3cz.mongodb.net/?retryWrites=true&w=majority', () => {
     console.log("Mongo connected");
 });
 
